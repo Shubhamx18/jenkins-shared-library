@@ -3,7 +3,7 @@ def call() {
     withCredentials([usernamePassword(
         credentialsId: "dockerHubCred",
         usernameVariable: "USER",
-        passwordVariable: "PASS"
+        passwordVariable: "PASS" 
     )]) {
 
         sh '''
