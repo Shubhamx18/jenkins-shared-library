@@ -328,18 +328,7 @@ def result = util.performAction('hello')
 open build/reports/jacoco/test/html/index.html
 ```
 
-## ✅ Best Practices
 
-| Category | Guideline |
-|----------|-----------|
-| **Function Design** | Keep functions focused - one responsibility per function |
-| **Parameters** | Use Map parameters with sensible defaults: `call(Map config = [:])` |
-| **Error Handling** | Always wrap external calls in try-catch with meaningful error messages |
-| **Serialization** | All classes must implement `Serializable` for pipeline compatibility |
-| **Versioning** | Use Git tags for releases: `v1.0.0`, `v1.1.0`, etc. |
-| **Documentation** | Document all public functions with param descriptions and examples |
-| **Testing** | Write unit tests for all new functions and classes |
-| **Security** | Never hardcode credentials - use Jenkins credentials store |
 
 ## 🐛 Troubleshooting
 
@@ -378,18 +367,6 @@ open build/reports/jacoco/test/html/index.html
 3. Avoid storing pipeline steps reference in class fields
 </details>
 
-<details>
-<summary><b>CPS mismatch / IllegalStateException</b></summary>
-
-**Symptoms:** Pipeline fails with CPS-related errors
-
-**Solutions:**
-1. Use `@NonCPS` annotation for methods that don't need to be serialized
-2. Avoid complex Groovy iterations in CPS context - use simple loops
-3. Move complex logic to `@NonCPS` methods or separate classes
-</details>
-
-> 💡 **Still stuck?** Check [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) or open an issue
 
 ## 🤝 Contributing
 
@@ -401,31 +378,7 @@ We welcome contributions! Here's how to get started:
 4. **Push** to the branch: `git push origin feature/my-feature`
 5. **Open** a Pull Request
 
-**Before submitting:**
-- ✅ Add tests for new functionality
-- ✅ Update documentation
-- ✅ Ensure all tests pass: `./gradlew test`
-- ✅ Follow existing code style
+<p align="center">
+  ⭐ <i>Happy Learning & Happy Coding!</i> ⭐
+</p>
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
-
-## 📄 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
-
-## 📞 Support
-
-- 📚 **Documentation**: [docs/](docs/)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/your-org/jenkins-shared-library/issues)
-- 💬 **Slack**: `#jenkins-support`
-- 📧 **Email**: devops-team@company.com
-
-## 🔗 Related Resources
-
-- [Jenkins Shared Libraries Documentation](https://www.jenkins.io/doc/book/pipeline/shared-libraries/)
-- [Groovy Documentation](https://groovy-lang.org/documentation.html)
-- [Jenkins Pipeline Syntax](https://www.jenkins.io/doc/book/pipeline/syntax/)
-
----
-
-<p align="center">Made with ❤️ by the DevOps Team</p>
